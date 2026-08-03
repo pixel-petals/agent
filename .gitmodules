@@ -2,3 +2,8 @@
 	path = .claude
 	url = git@github.com:pixel-petals/agent.git
 	branch = main-claude
+
+[submodule "agent"]
+	path = .agent
+	url = git@github.com:pixel-petals/agent.git
+	branch = main-agent
