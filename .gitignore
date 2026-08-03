@@ -13,7 +13,16 @@
 !/.gitmodules
 !/LICENSE
 
-!/src
-!/src/**
+!AGENTS.md
 
-!/**/*.md
+!/agents/
+!/agents/**
+
+!/commands/
+!/commands/**
+
+!/rules/
+!/rules/**
+
+!/skills/
+!/skills/**
