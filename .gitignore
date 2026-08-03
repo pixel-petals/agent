@@ -1,0 +1,9 @@
+# ignore ALL
+*
+
+!.gitignore
+
+!CLAUDE.md
+
+!/agents/
+!/agents/**
