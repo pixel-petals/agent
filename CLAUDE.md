@@ -1,1 +1,1 @@
-[@agents](../.agent/agents.md)
+[@../.agent/AGENTS.md](../.agent/AGENTS.md)
