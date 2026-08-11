@@ -17,7 +17,7 @@
 | [Debug prints](#commented-out-debug-prints) | Commented out, not deleted |
 | [Dead code](#dead-code--block-comment) | Block comment |
 | [TODOs](#todo-markers--lowercase-inline) | `todo ...` inline, lowercase |
-| [Doc blocks](#no-doc-block-comments) | None |
+| [Doc blocks](#no-doc-block-comments) | Type annotations only; no function headers |
 | [Index-tracking loops](#compact-loop-syntax) | Counter on loop boundary line |
 
 ---
@@ -147,9 +147,16 @@ Large bodies of removed or superseded code are kept as block comments rather tha
 
 Lowercase, no ticket number, placed at the callsite.
 
-### No doc-block comments
+### Doc-block type annotations
 
-There are no docstrings or function header comments. The function name and parameter names carry all the documentation.
+JSDoc-style `/** */` blocks are used for type annotations where the type cannot be inferred. Prefer a named `@import` or `@typedef` over an inline type expression — inline expressions grow long and hurt readability.
+
+```text
+/** @import { User, AdminConfig } from "./types" */
+
+/** @type {User} */
+const primaryAdmin = getAdmin();
+```
 
 ---
 
