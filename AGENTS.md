@@ -1,5 +1,5 @@
 
 # Agent Instructions
 
-- [@Coding Guidelines](rules/code/code.md)
-- [@Agents](agents/agents.md)
+- [@rules/code/code.md](rules/code/code.md) — Coding Guidelines
+- [@agents/agents.md](agents/agents.md) — Agents

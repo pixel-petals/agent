@@ -3,7 +3,7 @@
 
 Vendor-neutral subagent definitions. Each file below can be adapted into a vendor-specific subagent format (e.g. Claude Code's `.claude/agents/*.md` frontmatter) by linking to it or copying its content.
 
-- [@Code Reviewer](code-reviewer.md)
-- [@Test Writer](test-writer.md)
-- [@Planner](planner.md)
-- [@Docs Writer](docs-writer.md)
+- [@code-reviewer.md](code-reviewer.md) — Code Reviewer
+- [@test-writer.md](test-writer.md) — Test Writer
+- [@planner.md](planner.md) — Planner
+- [@docs-writer.md](docs-writer.md) — Docs Writer

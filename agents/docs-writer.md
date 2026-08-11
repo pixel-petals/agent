@@ -7,7 +7,7 @@ description: Writes or updates documentation and code comments. Use for READMEs,
 
 Links:
 
-- [@Documentation](../rules/code/code-documentation.md)
+- [@../rules/code/code-documentation.md](../rules/code/code-documentation.md) — Documentation
 
 ## Responsibilities
 

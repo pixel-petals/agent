@@ -7,8 +7,8 @@ description: Writes or extends automated tests for existing code. Use when behav
 
 Links:
 
-- [@Testing](../rules/code/code-testing.md)
-- [@Design Principles](../rules/code/code-principles.md)
+- [@../rules/code/code-testing.md](../rules/code/code-testing.md) — Testing
+- [@../rules/code/code-principles.md](../rules/code/code-principles.md) — Design Principles
 
 ## Responsibilities
 

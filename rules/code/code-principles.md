@@ -5,12 +5,12 @@ As a general rule of thumb: one or two layers of abstraction is typically suffic
 
 ## Index
 
-- [@SOLID](principles/SOLID.md)
-- [@YAGNI (do the needed)](principles/YAGNI.md)
-- [@KISS (do it simple)](principles/KISS-keep-it-simple.md)
-- [@DRY (do it once)](principles/DRY-dont-repeat-yourself.md)
-- [@COC (Convention over Configuration)](principles/COC-convention-over-configuration.md)
-- [@Composition over Inheritance](principles/composition.md)
-- [@LoD (Law of Demeter)](principles/LoD-law-of-demeter.md)
-- [@Pure Programming](principles/pure-programming.md)
-- [@Tell, Don't Ask](principles/tell-dont-ask.md)
+- [@principles/SOLID.md](principles/SOLID.md) — SOLID
+- [@principles/YAGNI.md](principles/YAGNI.md) — YAGNI (do the needed)
+- [@principles/KISS-keep-it-simple.md](principles/KISS-keep-it-simple.md) — KISS (do it simple)
+- [@principles/DRY-dont-repeat-yourself.md](principles/DRY-dont-repeat-yourself.md) — DRY (do it once)
+- [@principles/COC-convention-over-configuration.md](principles/COC-convention-over-configuration.md) — COC (Convention over Configuration)
+- [@principles/composition.md](principles/composition.md) — Composition over Inheritance
+- [@principles/LoD-law-of-demeter.md](principles/LoD-law-of-demeter.md) — LoD (Law of Demeter)
+- [@principles/pure-programming.md](principles/pure-programming.md) — Pure Programming
+- [@principles/tell-dont-ask.md](principles/tell-dont-ask.md) — Tell, Don't Ask
