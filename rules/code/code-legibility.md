@@ -4,21 +4,21 @@
 
 ## Summary
 
-| Situation | Convention |
-| --- | --- |
-| [Between any two functions](#between-functions--always-one-blank-line) | One blank line |
-| [Guard clause vs. main body](#inside-functions--blank-lines-separate-logical-phases) | One blank line |
-| [Logical phases inside a function](#inside-functions--blank-lines-separate-logical-phases) | One blank line |
-| [Semantic groups inside an object literal](#inside-object-literals--blank-lines-group-semantic-keys) | One blank line |
-| [Import groups](#imports--blank-lines-separate-import-groups-by-layer) | One blank line between groups |
-| [Last line before a closing keyword](#no-trailing-blank-inside-a-block) | No blank |
-| [Named file sections](#section-headers--ascii-underline) | Label + `■■■` underline |
-| [Inline why/disambiguation](#inline-explanatory-comments--rare) | Same-line comment, rare |
-| [Debug prints](#commented-out-debug-prints) | Commented out, not deleted |
-| [Dead code](#dead-code--block-comment) | Block comment |
-| [TODOs](#todo-markers--lowercase-inline) | `todo ...` inline, lowercase |
-| [Doc blocks](#no-doc-block-comments) | Type annotations only; no function headers |
-| [Index-tracking loops](#compact-loop-syntax) | Counter on loop boundary line |
+| Situation                                                                                            | Convention                                 |
+| ---------------------------------------------------------------------------------------------------- | ------------------------------------------ |
+| [Between any two functions](#between-functions--always-one-blank-line)                               | One blank line                             |
+| [Guard clause vs. main body](#inside-functions--blank-lines-separate-logical-phases)                 | One blank line                             |
+| [Logical phases inside a function](#inside-functions--blank-lines-separate-logical-phases)           | One blank line                             |
+| [Semantic groups inside an object literal](#inside-object-literals--blank-lines-group-semantic-keys) | One blank line                             |
+| [Import groups](#imports--blank-lines-separate-import-groups-by-layer)                               | One blank line between groups              |
+| [Last line before a closing keyword](#no-trailing-blank-inside-a-block)                              | No blank                                   |
+| [Named file sections](#section-headers--ascii-underline)                                             | Label + `■■■` underline                    |
+| [Inline why/disambiguation](#inline-explanatory-comments--rare)                                      | Same-line comment, rare                    |
+| [Debug prints](#commented-out-debug-prints)                                                          | Commented out, not deleted                 |
+| [Dead code](#dead-code--block-comment)                                                               | Block comment                              |
+| [TODOs](#todo-markers--lowercase-inline)                                                             | `todo ...` inline, lowercase               |
+| [Doc blocks](#doc-block-comments)                                                                     | Function headers + type annotations; deeper docs in a same-named `.md` |
+| [Index-tracking loops](#compact-loop-syntax)                                                         | Counter on loop boundary line              |
 
 ---
 
@@ -114,7 +114,7 @@ Used sparingly — only when a file contains multiple distinct named concepts th
 
 ### Inline explanatory comments — rare
 
-A short note on a line that would otherwise be cryptic. Not a narration of what the code does — only the *why* or a disambiguation.
+A short note on a line that would otherwise be cryptic. Not a narration of what the code does — only the _why_ or a disambiguation.
 
 ```text
 runner = singleton("runner", "Worker.Runner")
@@ -147,11 +147,18 @@ Large bodies of removed or superseded code are kept as block comments rather tha
 
 Lowercase, no ticket number, placed at the callsite.
 
-### Doc-block type annotations
+### Doc-block comments
 
-JSDoc-style `/** */` blocks are used for type annotations where the type cannot be inferred. Prefer a named `@import` or `@typedef` over an inline type expression — inline expressions grow long and hurt readability.
+JSDoc-style `/** */` blocks are used on function headers and for type annotations. A description is welcome; keep it to the intent, not a restatement of the signature.
+
+For anything beyond a one-liner — extended rationale, examples, edge cases — create a markdown file with the same name as the code file and link to it from the doc-block.
+
+For type annotations where the type cannot be inferred, prefer a named `@import` or `@typedef` over an inline type expression — inline expressions grow long and hurt readability.
 
 ```text
+/** Resolves a label template against a matched file's context. See label.md. */
+export function resolveLabel(template: string, ctx: LabelContext): string { ... }
+
 /** @import { User, AdminConfig } from "./types" */
 
 /** @type {User} */
