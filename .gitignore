@@ -26,13 +26,12 @@
 # project files
 # ——————————————————————————————
 
+# root project files
+!/*.*
 !/LICENSE
 
 # .gitignore, .gitattributes, .gitmodules
 !/.git?*
-
-# non-hidden files
-!/*.*
 
 # coding agents
 # ——————————————————————————————
@@ -66,6 +65,12 @@
 
 # Blacklist
 # ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+
+# .env files
+# ——————————————————————————————
+
+**/.env*
+!**/.env*.example # allow example file
 
 # dependencies
 # ——————————————————————————————
