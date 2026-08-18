@@ -33,6 +33,12 @@
 # .gitignore, .gitattributes, .gitmodules
 !/.git?*
 
+# IDE
+# ——————————————————————————————
+
+!/.vscode/
+!/.vscode/**
+
 # coding agents
 # ——————————————————————————————
 
@@ -41,6 +47,12 @@
 
 !/.claude*/
 !/.claude*/**
+
+# documentation
+# ——————————————————————————————
+
+!/docs/
+!/docs/**
 
 # source code
 # ——————————————————————————————
