@@ -1,9 +1,1 @@
-# ignore all
-*
-
-!/.gitattributes
-!/.gitignore
-!/.gitmodules
-!/LICENSE
-
-!/.claude
+node_modules/
