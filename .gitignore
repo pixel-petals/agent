@@ -29,9 +29,7 @@
 # root project files
 !/*.*
 !/LICENSE
-
-# .gitignore, .gitattributes, .gitmodules
-!/.git?*
+!/.git?* # allow .gitignore, .gitattributes, .gitmodules
 
 # IDE
 # ——————————————————————————————
@@ -77,6 +75,8 @@
 
 # Blacklist
 # ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+
+**/.git
 
 # .env files
 # ——————————————————————————————
