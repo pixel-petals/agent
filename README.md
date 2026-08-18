@@ -39,13 +39,7 @@ packages/
   <plugin>/
     .claude-plugin/plugin.json    ← installable manifest
     hooks/hooks.json              ← SessionStart hook (emits rules to context)
-    rules/                        ← vendor-neutral rule content
-    vendors/
-      claude/CLAUDE.md            ← Claude-specific adapter
-      copilot/                    ← stub
-      gpt/                        ← stub
-      gemini/                     ← stub
-      codex/                      ← stub
+    rules/                        ← rule content
 ```
 
-Each plugin's `SessionStart` hook cats its `vendors/claude/CLAUDE.md` into context, injecting the rules at the beginning of every session.
+Each plugin's `SessionStart` hook cats its rules into context, injecting them at the beginning of every session.
