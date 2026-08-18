@@ -1,0 +1,5 @@
+{
+  "name": "agents",
+  "version": "1.0.0",
+  "description": "Vendor-neutral subagent definitions: code-reviewer, test-writer, planner, docs-writer."
+}
