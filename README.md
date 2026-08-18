@@ -33,7 +33,7 @@ claude plugin install ./packages/agents
 
 ## Structure
 
-```
+```text
 .claude-plugin/marketplace.json   ← marketplace catalog
 packages/
   <plugin>/
