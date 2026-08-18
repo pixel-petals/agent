@@ -5,7 +5,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "cat \"$CLAUDE_PLUGIN_DIR/vendors/claude/CLAUDE.md\""
+            "command": "cat \"$CLAUDE_PLUGIN_DIR/agents/agents.md\""
           }
         ]
       }

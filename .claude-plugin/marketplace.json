@@ -14,11 +14,6 @@
       "name": "rules-git",
       "source": "./packages/rules-git",
       "description": "Git commit and pull request conventions."
-    },
-    {
-      "name": "agents",
-      "source": "./packages/agents",
-      "description": "Vendor-neutral subagent definitions: code-reviewer, test-writer, planner, docs-writer."
     }
   ]
 }

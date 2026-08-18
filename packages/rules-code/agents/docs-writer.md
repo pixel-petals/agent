@@ -2,7 +2,7 @@
 
 Links:
 
-- [@../../rules/code/code-documentation.md](../../rules/code/code-documentation.md) — Documentation
+- [@../rules/code-documentation.md](../rules/code-documentation.md) — Documentation
 
 ## Responsibilities
 
