@@ -1,12 +1,62 @@
+# ignore ALL files & folders
 *
 
-!.git?*
-!*.md
-!*.json
-!LICENSE
+# Whitelist
+# ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+
+# project files
+# ——————————————————————————————
+
+!/LICENSE
+
+# .gitignore, .gitattributes, .gitmodules
+!/.git?*
+
+# non-hidden files
+!/*.*
+
+# coding agents
+# ——————————————————————————————
+
+!/.agent?/
+!/.agent?/**
+
+!/.claude/
+!/.claude/**
+
+# source code
+# ——————————————————————————————
+
+!/src
+!/src/**
 
 !/packages/
 !/packages/**
 
-!/.claude-plugin/
-!/.claude-plugin/**
+!/utils/
+!/utils/**
+
+# Blacklist
+# ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+
+# dependencies
+# ——————————————————————————————
+
+**/node_modules/
+**/roku_modules/
+
+# artifacts
+# ——————————————————————————————
+
+**/.artifacts/
+**/build/
+**/dist/
+**/out/
+
+# coding agents
+# ——————————————————————————————
+
+**/.claude/settings.local.json
+
+**/agent.local.md
+**/claude.local.md

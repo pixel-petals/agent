@@ -1,0 +1,8 @@
+{
+  "name": "@pixel-petals/version",
+  "version": "1.0.0",
+  "private": true,
+  "bin": {
+    "sync-version": "src/bump.js"
+  }
+}

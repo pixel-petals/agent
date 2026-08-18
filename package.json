@@ -2,6 +2,10 @@
   "name": "@pixel-petals/agent",
   "private": true,
   "workspaces": [
-    "packages/*"
-  ]
+    "packages/*",
+    "utils/*"
+  ],
+  "scripts": {
+    "version": "sync-version"
+  }
 }
