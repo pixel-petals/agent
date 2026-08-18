@@ -13,11 +13,11 @@
 | [Import groups](#imports--blank-lines-separate-import-groups-by-layer)                               | One blank line between groups              |
 | [Last line before a closing keyword](#no-trailing-blank-inside-a-block)                              | No blank                                   |
 | [Named file sections](#section-headers--ascii-underline)                                             | Label + `■■■` underline                    |
-| [Inline why/disambiguation](#inline-explanatory-comments--rare)                                      | Same-line comment, rare                    |
+| [Inline why/disambiguation](#inline-explanatory-comments)                                            | Intent-focused; not a restatement          |
 | [Debug prints](#commented-out-debug-prints)                                                          | Commented out, not deleted                 |
 | [Dead code](#dead-code--block-comment)                                                               | Block comment                              |
 | [TODOs](#todo-markers--lowercase-inline)                                                             | `todo ...` inline, lowercase               |
-| [Doc blocks](#doc-block-comments)                                                                     | Function headers + type annotations; deeper docs in a same-named `.md` |
+| [Doc blocks](#doc-block-comments)                                                                    | Function headers + type annotations        |
 | [Index-tracking loops](#compact-loop-syntax)                                                         | Counter on loop boundary line              |
 
 ---
@@ -112,9 +112,9 @@ function moveFocusedGroup(...)
 
 Used sparingly — only when a file contains multiple distinct named concepts that would otherwise blur together.
 
-### Inline explanatory comments — rare
+### Inline explanatory comments
 
-A short note on a line that would otherwise be cryptic. Not a narration of what the code does — only the _why_ or a disambiguation.
+Inline comments are good. Keep them focused on intent — the _why_, a constraint, or a disambiguation — not a restatement of what the code does.
 
 ```text
 runner = singleton("runner", "Worker.Runner")
@@ -125,7 +125,7 @@ runner = singleton("runner", "Worker.Runner")
 title.text = content.title // "On Now: "
 ```
 
-The second form is used when the comment annotates intent or a label that was considered but rejected.
+The second form annotates what a value looks like at runtime — a sample string, a rejected label, an example output.
 
 ### Commented-out debug prints
 
