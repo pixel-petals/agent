@@ -11,3 +11,6 @@ if (!version) {
 
 syncMarketplace(version);
 syncPlugins(version);
+
+const { execSync } = require("child_process");
+execSync("git add .claude-plugin/marketplace.json packages", { cwd: process.env.npm_config_local_prefix, stdio: "inherit" });
