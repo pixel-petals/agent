@@ -5,7 +5,8 @@
         "hooks": [
           {
             "type": "command",
-            "command": "cat \"$CLAUDE_PLUGIN_DIR/rules/code.md\""
+            "command": "cat \"$CLAUDE_PLUGIN_ROOT/rules/code.md\"",
+            "commandWindows": "cat \"$env:CLAUDE_PLUGIN_ROOT/rules/code.md\""
           }
         ]
       }
