@@ -1,0 +1,24 @@
+{
+  "name": "pixel-petals",
+  "owner": {
+    "name": "Pixel Petals",
+    "email": "addison@pixelpetals.ca"
+  },
+  "plugins": [
+    {
+      "name": "rules-code",
+      "source": "./packages/rules-code",
+      "description": "Code formatting, legibility, principles, planning, documentation, and testing rules."
+    },
+    {
+      "name": "rules-git",
+      "source": "./packages/rules-git",
+      "description": "Git commit and pull request conventions."
+    },
+    {
+      "name": "agents",
+      "source": "./packages/agents",
+      "description": "Vendor-neutral subagent definitions: code-reviewer, test-writer, planner, docs-writer."
+    }
+  ]
+}
