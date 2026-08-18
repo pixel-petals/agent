@@ -8,6 +8,7 @@
 | ---------------------------------------------------------------------------------------------------- | ------------------------------------------ |
 | [Between any two functions](#between-functions--always-one-blank-line)                               | One blank line                             |
 | [Guard clause vs. main body](#inside-functions--blank-lines-separate-logical-phases)                 | One blank line                             |
+| [Multi-part guard condition](#naming-inline-guard-conditions)                                        | Name it with a `const`                     |
 | [Logical phases inside a function](#inside-functions--blank-lines-separate-logical-phases)           | One blank line                             |
 | [Semantic groups inside an object literal](#inside-object-literals--blank-lines-group-semantic-keys) | One blank line                             |
 | [Import groups](#imports--blank-lines-separate-import-groups-by-layer)                               | One blank line between groups              |
@@ -94,6 +95,47 @@ No hard rule on what constitutes a group, but the groupings track concern (data 
 ### No trailing blank inside a block
 
 The last line before a closing keyword (`end`, `}`, etc.) is never blank.
+
+---
+
+## Guard Conditions
+
+### Naming inline guard conditions
+
+An add-on to [When to Split a Function](code-formatting.md#when-to-split-a-function), for guards that stay inline because extracting a predicate function would be overkill. It is not an alternative to extraction: if several named conditions all answer the same question, that is the scope trigger firing, and the answer is a function.
+
+For a guard that stays, assign the condition to a `const` named for **why it matters**, then branch on the name.
+
+```ts
+const alreadyBound = Object.prototype.hasOwnProperty.call(instance, name)
+if (alreadyBound) continue
+```
+
+Name the intent, not the call. `alreadyBound` says why we skip; `hasProp` just restates `hasOwnProperty` and earns nothing. If the name is a synonym for the expression, drop it — the expression was already clear, and `if (!items.length) return` needs no help.
+
+The payoff scales with the condition, so this matters most when it has several parts. Name each part, and name the whole when the combination itself has a meaning:
+
+```ts
+const isExpired = Date.now() > token.expiresAt
+const isRevoked = token.status === "revoked"
+const isUnusable = isExpired || isRevoked
+
+if (isUnusable) return null
+```
+
+The reader picks up the vocabulary — expired, revoked, unusable — instead of re-deriving it from operators. Where the combination has no natural name, `if (isExpired || isRevoked)` is finished; inventing `shouldSkip` adds a line and no meaning.
+
+**Use `const`.** TypeScript narrows through a `const` boolean alias, including a compound one. With `let` it gives up, and the use site fails with "possibly null".
+
+**Preserve short-circuiting.** Hoisting turns `&&` into unconditional evaluation, so never hoist a clause that is expensive, side-effecting, or only safe once an earlier guard has passed:
+
+```ts
+const isMissing = user == null
+const isAdmin = user.role === "admin"   // throws when user is null
+if (isMissing || !isAdmin) return
+```
+
+When a later clause depends on an earlier one, leave it in the guard or split into sequential guards, so the dependency is enforced by control flow.
 
 ---
 
