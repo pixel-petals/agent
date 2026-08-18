@@ -1,3 +1,22 @@
+
+# .gitignore patterns
+# ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+
+# Allowlist strategy: ignore everything, then explicitly allow what belongs.
+# This prevents accidental commits of new files or folders.
+#
+# Pattern reference:
+#   /foo    — root only
+#   foo/    — folders only
+#   *       — any chars (no /)
+#   ?       — any single char (no /)
+#   **/     — any depth of folders
+#   /**     — everything inside
+#   a/**/b — anything between a and b
+
+# .gitignore rules
+# ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+
 # ignore ALL files & folders
 *
 
@@ -18,11 +37,11 @@
 # coding agents
 # ——————————————————————————————
 
-!/.agent?/
-!/.agent?/**
+!/.agent*/
+!/.agent*/**
 
-!/.claude/
-!/.claude/**
+!/.claude*/
+!/.claude*/**
 
 # source code
 # ——————————————————————————————
@@ -30,8 +49,17 @@
 !/src
 !/src/**
 
+# monorepo workspace folders
+# ------------------------------
+
+!/apps/
+!/apps/**
+
 !/packages/
 !/packages/**
+
+!/plugins/
+!/plugins/**
 
 !/utils/
 !/utils/**
