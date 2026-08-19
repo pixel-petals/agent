@@ -1,6 +1,6 @@
 # Response Formatting
 
-How to relay results after work or thinking is done. Governs the final message, not the work itself.
+How to relay results after work or thinking is done. Governs the final message in chat, not the work itself and not authored files — markdown documents follow [documents.md](documents.md).
 
 ## Structure
 
