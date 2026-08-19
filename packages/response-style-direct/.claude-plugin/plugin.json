@@ -1,5 +1,5 @@
 {
   "name": "response-style-direct",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "How Claude formats its replies: lead with the answer, no filler, present tense."
 }
