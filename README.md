@@ -9,7 +9,6 @@ A plugin monorepo for AI coding agents. Each package is an installable plugin th
 | [`rules-code`](packages/rules-code/) | Code formatting, legibility, principles, planning, documentation, and testing rules |
 | [`rules-git`](packages/rules-git/) | Git commit and pull request conventions |
 | [`response-style-direct`](packages/response-style-direct/) | How Claude formats its replies: lead with the answer, no filler, present tense |
-| [`agents`](packages/agents/) | Subagent definitions: code-reviewer, test-writer, planner, docs-writer |
 
 ## Installation
 
@@ -22,7 +21,6 @@ Add this repo as a marketplace source, then install individual plugins:
 /plugin install rules-code@pixel-petals
 /plugin install rules-git@pixel-petals
 /plugin install response-style-direct@pixel-petals
-/plugin install agents@pixel-petals
 ```
 
 Or install directly from a local clone:
@@ -31,7 +29,6 @@ Or install directly from a local clone:
 claude plugin install ./packages/rules-code
 claude plugin install ./packages/rules-git
 claude plugin install ./packages/response-style-direct
-claude plugin install ./packages/agents
 ```
 
 ## Structure
