@@ -15,6 +15,11 @@
       "name": "rules-git",
       "source": "./packages/rules-git",
       "description": "Git commit and pull request conventions."
+    },
+    {
+      "name": "response-style-direct",
+      "source": "./packages/response-style-direct",
+      "description": "How Claude formats its replies: lead with the answer, no filler, present tense."
     }
   ]
 }
